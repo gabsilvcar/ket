@@ -11,3 +11,6 @@ pylint
 pytest
 pytest-cov
 twine
+pyzx
+pandas
+seaborn
