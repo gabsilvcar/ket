@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: 2020 Evandro Chagas Ribeiro da Rosa <evandro@quantuloop.com>
+# SPDX-FileCopyrightText: 2020 Rafael de Santiago <r.santiago@ufsc.br>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+[package]
+name = "kbw"
+version = "0.2.0"
+authors = ["Evandro Chagas Ribeiro da Rosa <evandro@quantuloop.com>"]
+description = "Ket Bitwise Simulator"
+repository = "https://gitlab.com/quantum-ket/kbw"
+documentation = "https://quantumket.org"
+license = "Apache-2.0"
+readme = "README.md"
+edition = "2021"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libket = "0.4.0"
+num = "0.4"
+rand = "0.8.5"
+rayon = "1.5.3"
+twox-hash = "1.6.3"
+itertools = "0.12.0"
+log = "0.4.20"
+env_logger = "0.11.0"
+thiserror = "1.0.56"
+
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+strip = true
